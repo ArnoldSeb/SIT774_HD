@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Awesome Web Features</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script defer src="/script.js"></script>
+  <style>
+    .hero {
+      height: 90vh;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/background.jpg') center center/cover no-repeat;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+      transition: all 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Awesome Features</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <% if (typeof user !== 'undefined') { %>
+          <li class="nav-item"><a class="nav-link" href="/logout">Logout</a></li>
+        <% } else { %>
+          <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
+        <% } %>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <h1 class="display-4">Welcome to Awesome Web Features</h1>
+    <p class="lead">Showcasing Secure Auth, Dynamic Data, and Stunning UI</p>
+    <a href="#features" class="btn btn-light mt-4">Explore Features ↓</a>
+  </div>
+</section>
+
+<section id="features" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="mb-4 section-title">Core Features</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-3 card p-4 m-2" data-bs-toggle="modal" data-bs-target="#authModal">
+        <h5>🔒 Secure Auth</h5>
+        <p>Login system using bcrypt and express-session.</p>
+      </div>
+      <div class="col-md-3 card p-4 m-2" data-bs-toggle="modal" data-bs-target="#jsonModal">
+        <h5>📦 Dynamic JSON</h5>
+        <p>Render dynamic content from local/remote JSON sources.</p>
+      </div>
+      <div class="col-md-3 card p-4 m-2" data-bs-toggle="modal" data-bs-target="#uiModal">
+        <h5>🎨 Interactive UI</h5>
+        <p>Bootstrap + CSS animations for smooth user experience.</p>
+      </div>
+      <div class="col-md-3 card p-4 m-2">
+        <!-- Dark Mode Toggle Button -->
+        <h5>🌙 Dark Mode</h5>
+        <button id="darkToggle" title="Toggle Dark Mode">🌓</button>
+    </div>
+  </div>
+</section>
+
+<!-- Modals -->
+<div class="modal fade" id="authModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog"><div class="modal-content p-4">
+    <h4>Secure Authentication</h4>
+    <p>This project uses bcrypt to hash passwords and express-session to handle session-based authentication. No credentials are stored in plain text.</p>
+  </div></div>
+</div>
+
+<div class="modal fade" id="jsonModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog"><div class="modal-content p-4">
+    <h4>Dynamic JSON Rendering</h4>
+    <p>Content in this site can be rendered dynamically using a local or remote JSON file. This allows scalable and flexible data-driven pages.</p>
+  </div></div>
+</div>
+
+<div class="modal fade" id="uiModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog"><div class="modal-content p-4">
+    <h4>Beautiful UI</h4>
+    <p>Designed with Bootstrap 5 and CSS hover animations to create a modern, responsive user interface.</p>
+  </div></div>
+</div>
+
+<section class="py-5">
+  <div class="container text-center">
+    <h2 class="mb-4">Tutorials </h2>
+    <div class="row" id="tutorialCards">
+      <!-- Tutorials inserted here dynamically by script.js -->
+    </div>
+  </div>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
