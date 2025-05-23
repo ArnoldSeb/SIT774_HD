@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Secure Authentication with Bcrypt",
+    "description": "Learn how to hash passwords and manage user sessions securely in Node.js using bcrypt and express-session.",
+    "link": "https://www.npmjs.com/package/bcrypt"
+  },
+  {
+    "title": "Working with JSON Data",
+    "description": "A guide to fetching and rendering JSON data dynamically into a web page using JavaScript.",
+    "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON"
+  },
+  {
+    "title": "Bootstrap 5 Components",
+    "description": "Explore how to use Bootstrap 5’s responsive cards, modals, and navbars to create interactive UIs.",
+    "link": "https://getbootstrap.com/docs/5.3/components/card/"
+  }
+]
