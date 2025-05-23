@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Loading</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      flex-direction: column;
+    }
+    .percentage {
+      font-size: 4rem;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>Loading...</h1>
+    <div class="percentage" id="percent">0%</div>
+  </div>
+
+  <script>
+    let percent = 0;
+    const el = document.getElementById("percent");
+    const interval = setInterval(() => {
+      percent += 1;
+      el.textContent = percent + "%";
+      if (percent >= 100) {
+        clearInterval(interval);
+        window.location.href = "/index";
+      }
+    }, 20);
+  </script>
+</body>
+</html>
