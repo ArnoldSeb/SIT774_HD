@@ -1,0 +1,58 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+.card {
+  border-radius: 12px;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+body.dark-mode .navbar,
+body.dark-mode .modal-content {
+  background-color: #1a1a1a !important;
+}
+
+#darkToggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #343a40;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#darkToggle:hover {
+  background-color: #495057;
+  transform: scale(1.1);
+}
+
+body.dark-mode h2 {
+  color: #ffffff !important;
+}
+
+body.dark-mode .section-title {
+  color: #000000 !important; /* or choose another visible color */
+}
